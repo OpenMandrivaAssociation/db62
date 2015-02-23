@@ -1,0 +1,11 @@
+--- db-6.1.19/dist/Makefile.in.0001~	2015-02-23 12:40:05.845348275 +0100
++++ db-6.1.19/dist/Makefile.in	2015-02-23 12:41:22.446036926 +0100
+@@ -107,7 +107,7 @@ libxso_major=	$(libcxx_base)-$(LIBMAJOR)
+ ##################################################
+ SQLFLAGS=	-I$(builddir) -I$(builddir)/sql -I$(langdir)/sql/generated \
+ 		-D_HAVE_SQLITE_CONFIG_H @SQL_FLAGS@
+-LIBSQLSO_LIBS=  @LIBSQLSO_LIBS@ @LIBCSO_LIBS@ @LIBSO_LIBS@
++LIBSQLSO_LIBS=  @LIBSQLSO_LIBS@ @LIBCSO_LIBS@ @LIBSO_LIBS@ -ldl -lpthread
+ 
+ libsql_base=	libdb_sql
+ libsql=		$(libsql_base).a
