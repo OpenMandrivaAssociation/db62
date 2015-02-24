@@ -36,7 +36,7 @@
 Summary:	The Berkeley DB database library for C
 Name:		%{sname}%{binext}
 Version:	6.1.19
-Release:	1
+Release:	2
 License:	BSD
 Group:		System/Libraries
 Url:		http://www.oracle.com/technology/software/products/berkeley-db/
@@ -465,16 +465,13 @@ mv %{buildroot}%{_bindir}/{dbsql,db%{api}_sql}
 %files -n %{libname}
 %doc LICENSE README
 %{_libdir}/libdb-%{api}.so
-%{_libdir}/libdb-6.so
 
 %files -n %{libdbcxx}
 %{_libdir}/libdb_cxx-%{api}.so
-%{_libdir}/libdb_cxx-6.so
 
 %if %{with sql}
 %files -n %{libdbsql}
 %{_libdir}/libdb_sql-%{api}.so
-%{_libdir}/libdb_sql-6.so
 %endif
 
 %if %{with java}
@@ -546,9 +543,12 @@ mv %{buildroot}%{_bindir}/{dbsql,db%{api}_sql}
 %endif
 %{_includedir}/db.h
 %{_libdir}/libdb.so
+%{_libdir}/libdb-6.so
 %{_libdir}/libdb_cxx.so
+%{_libdir}/libdb_cxx-6.so
 %if %{with sql}
 %{_libdir}/libdb_sql.so
+%{_libdir}/libdb_sql-6.so
 %endif
 %if %{with tcl}
 %{_libdir}/libdb_tcl.so
