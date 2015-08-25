@@ -22,7 +22,7 @@
 %endif
 
 %bcond_without sql
-%bcond_without tcl
+%bcond_with tcl
 %bcond_without db1
 # Define to build a stripped down version to use for nss libraries
 %bcond_with	 nss
