@@ -278,7 +278,9 @@ CFLAGS="$CFLAGS -D_GNU_SOURCE -D_REENTRANT"
 %endif
 export CFLAGS
 
+%ifnarch %{arm}
 %global ldflags %{ldflags} -fuse-ld=bfd
+%endif
 
 %if %{with java}
 export CLASSPATH=
