@@ -1,4 +1,4 @@
-%define version 6.2.23
+%define version 6.2.32
 %define api %(echo %{version}|cut -d. -f1,2)
 %define shortapi %(echo %{version}|cut -d. -f1,1)
 %define binext	%(echo %{api} | sed -e 's|\\.||g')
@@ -31,7 +31,7 @@
 
 Summary:	The Berkeley DB database library for C
 Name:		%{sname}%{binext}
-Version:	6.2.23
+Version:	6.2.32
 Release:	1
 License:	BSD
 Group:		System/Libraries
@@ -489,6 +489,7 @@ mv %{buildroot}%{_bindir}/{dbsql,db%{api}_sql}
 %doc docs/api_reference/C/db_verify.html
 %{_bindir}/%{name}_archive
 %{_bindir}/%{name}_checkpoint
+%{_bindir}/%{name}_convert
 %{_bindir}/%{name}_deadlock
 %{_bindir}/%{name}_dump*
 %{_bindir}/%{name}_hotbackup
