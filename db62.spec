@@ -467,8 +467,8 @@ mv %{buildroot}%{_bindir}/{dbsql,db%{api}_sql}
 %{_jnidir}/db%{api}-%{version}.jar
 
 %files -n %{libdbjava}-javadoc
-%doc %{_javadocdir}/db%{api}-%{version}
-%doc %dir %{_javadocdir}/db%{api}
+%{_javadocdir}/db%{api}
+%{_javadocdir}/db%{api}-%{version}
 %endif
 
 %if %{with tcl}
