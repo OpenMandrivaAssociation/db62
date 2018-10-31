@@ -32,7 +32,7 @@
 Summary:	The Berkeley DB database library for C
 Name:		%{sname}%{binext}
 Version:	6.2.32
-Release:	2
+Release:	3
 License:	BSD
 Group:		System/Libraries
 Url:		http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
