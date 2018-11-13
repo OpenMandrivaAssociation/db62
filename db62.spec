@@ -304,7 +304,7 @@ CONFIGURE_TOP="../dist" \
 	--disable-posixmutexes \
 	--with-mutex=x86/gcc-assembly
 %endif
-%ifarch x86_64
+%ifarch %{x86_64}
 	--disable-posixmutexes \
 	--with-mutex=x86_64/gcc-assembly
 %endif
@@ -331,6 +331,10 @@ CONFIGURE_TOP="../dist" \
 %ifarch %{arm}
 	--disable-posixmutexes \
 	--with-mutex=ARM/gcc-assembly
+%endif
+%ifarch %{armx}
+	--disable-posixmutexes \
+	--with-mutex=ARM64/gcc-assembly
 %endif
 %else
 	--enable-posixmutexes \
