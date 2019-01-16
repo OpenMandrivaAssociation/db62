@@ -16,7 +16,7 @@
 %define libdbnss	%mklibname %{sname}nss %{api}
 %define devdbnss	%mklibname %{sname}nss %{api} -d
 
-%bcond_without java
+%bcond_with java
 %bcond_without sql
 %bcond_with tcl
 %bcond_without db1
