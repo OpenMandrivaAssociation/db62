@@ -1,4 +1,3 @@
-%define version 6.2.32
 %define api %(echo %{version}|cut -d. -f1,2)
 %define shortapi %(echo %{version}|cut -d. -f1,1)
 %define binext	%(echo %{api} | sed -e 's|\\.||g')
@@ -31,12 +30,12 @@
 
 Summary:	The Berkeley DB database library for C
 Name:		%{sname}%{binext}
-Version:	6.2.32
-Release:	3
+Version:	6.2.38
+Release:	1
 License:	BSD
 Group:		System/Libraries
 Url:		http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
-Source0:	http://download.oracle.com/berkeley-db/db-%{version}.tar.gz
+Source0:	http://download.oracle.com/otn/berkeley-db/db-%{version}.tar.gz
 # statically link db1 library
 Patch0:		db-5.1.19-db185.patch
 Patch1:		db-5.1.25-sql_flags.patch
@@ -198,7 +197,6 @@ modules which use Berkeley DB.
 %setup -qn %{sname}-%{version}
 # fix strange attribs
 find . -type f -perm 0444 -exec chmod 644 {} \;
-rm -r lang/sql/jdbc/doc
 %apply_patches
 
 # copy modern config.* files to target
