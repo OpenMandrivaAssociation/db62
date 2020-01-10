@@ -194,7 +194,7 @@ modules which use Berkeley DB.
 %setup -qn %{sname}-%{version}
 # fix strange attribs
 find . -type f -perm 0444 -exec chmod 644 {} \;
-%apply_patches
+%autopatch -p1
 
 # copy modern config.* files to target
 for f in config.guess config.sub ; do
