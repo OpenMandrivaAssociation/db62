@@ -34,7 +34,7 @@ Version:	6.2.38
 Release:	2
 License:	BSD
 Group:		System/Libraries
-Url:		http://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
+Url:		https://www.oracle.com/technetwork/database/database-technologies/berkeleydb/downloads/index.html
 Source0:	http://download.oracle.com/otn/berkeley-db/db-%{version}.tar.gz
 # statically link db1 library
 Patch0:		db-5.1.19-db185.patch
